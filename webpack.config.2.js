@@ -1,8 +1,8 @@
 /*
- * @Description: webpack弟3节课的配置
+ * @Description: webpack的配置文件
  * @Author: jidongyu
- * @Date: 2021-04-21 15:05:21
- * @LastEditTime: 2021-04-21 15:13:38
+ * @Date: 2021-04-20 16:33:19
+ * @LastEditTime: 2021-04-21 11:56:51
  * @LastEditors: jidongyu
  * @Reference: 
  */
@@ -28,24 +28,24 @@ module.exports = {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
             },
-            {
-                test: /\.less$/,
-                use: [
-                    // "style-loader",
-                    minicss.loader,
-                    "css-loader",
-                    "postcss-loader",
-                    "less-loader"
-                ]
-            },
             // {
             //     test: /\.less$/,
             //     use: [
-            //         "kkb-style-loader",
-            //         "kkb-css-loader",
-            //         "kkb-less-loader"
+            //         // "style-loader",
+            //         minicss.loader,
+            //         "css-loader",
+            //         "postcss-loader",
+            //         "less-loader"
             //     ]
             // },
+            {
+                test: /\.less$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "less-loader"
+                ]
+            },
             {
                 test: /\.js$/,
                 use: [
@@ -62,15 +62,6 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
-                test: /\.(png|jpe?g|gif|webp)$/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        name: "[name].[ext]"
-                    }
-                }
             }
         ]
     },

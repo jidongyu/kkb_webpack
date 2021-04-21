@@ -86,14 +86,39 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/css/index.less":
+/*!****************************!*\
+  !*** ./src/css/index.less ***!
+  \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/css/index.less?");
+
+/***/ }),
+
+/***/ "./src/images/src.png":
+/*!****************************!*\
+  !*** ./src/images/src.png ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"src.png\");\n\n//# sourceURL=webpack:///./src/images/src.png?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("/*\r\n * @Description: \r\n * @Author: jidongyu\r\n * @Date: 2021-04-20 16:32:46\r\n * @LastEditTime: 2021-04-20 22:38:46\r\n * @LastEditors: jidongyu\r\n * @Reference: \r\n */\r\n// import css from './css/style.css';\r\n// import css from './css/index.less';\r\nconsole.log('kkb 开课吧测试');\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.less */ \"./src/css/index.less\");\n/* harmony import */ var _images_src_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/src.png */ \"./src/images/src.png\");\n/*\r\n * @Description: \r\n * @Author: jidongyu\r\n * @Date: 2021-04-20 16:32:46\r\n * @LastEditTime: 2021-04-21 15:38:11\r\n * @LastEditors: jidongyu\r\n * @Reference: \r\n */\r\n// import css from './css/style.css';\r\n\r\n\r\nconsole.log('kkb 开课吧测试');\r\nconsole.log(_images_src_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\"图像\");\r\n\r\nlet img = new Image();\r\nimg.src = _images_src_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\r\nlet app = document.getElementById(\"app\");\r\napp.append(img);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
