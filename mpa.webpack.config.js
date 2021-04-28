@@ -2,7 +2,7 @@
  * @Description: 自动生成多入口文件和plugin的配置文件
  * @Author: jidongyu
  * @Date: 2021-04-27 11:26:08
- * @LastEditTime: 2021-04-27 12:51:23
+ * @LastEditTime: 2021-04-28 10:35:34
  * @LastEditors: jidongyu
  * @Reference: 
  */
@@ -22,9 +22,9 @@ const setMPA = () => {
     console.log('entryFiles:', entryFiles);
     /* 
     entryFiles: [
-        'E:/吉冬玉/天天向上/webpack/kkb-webpack/src/detail/index.js',
-        'E:/吉冬玉/天天向上/webpack/kkb-webpack/src/index/index.js',
-        'E:/吉冬玉/天天向上/webpack/kkb-webpack/src/list/index.js'
+        'E:/xxxxx/天天向上/webpack/kkb-webpack/src/detail/index.js',
+        'E:/xxxxx/天天向上/webpack/kkb-webpack/src/index/index.js',
+        'E:/xxxxx/天天向上/webpack/kkb-webpack/src/list/index.js'
     ]
     */
     entryFiles.map((item, index) => {
