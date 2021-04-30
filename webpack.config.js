@@ -2,7 +2,7 @@
  * @Description: webpack弟3节课的配置
  * @Author: jidongyu
  * @Date: 2021-04-21 15:05:21
- * @LastEditTime: 2021-04-27 11:35:46
+ * @LastEditTime: 2021-04-30 20:42:32
  * @LastEditors: jidongyu
  * @Reference: 
  */
@@ -22,6 +22,17 @@ module.exports = {
         path: path.resolve(__dirname, './dist')
     },
     mode: 'development',
+    devtool: "source-map",
+    devServer: {
+        contentBase: "./dist",
+        port: "8081",
+        open: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:9092/'
+            }
+        }
+    },
     resolveLoader: {
         modules: ["node_modules","./my-loader"]
     },
@@ -49,23 +60,23 @@ module.exports = {
             //         "kkb-less-loader"
             //     ]
             // },
-            {
-                test: /\.js$/,
-                use: [
-                    {
-                        loader: 'replace-loader-sync',
-                        options: {
-                            name: 'kkb 开课吧测试'
-                        }
-                    },
-                    {
-                        loader: 'replace-loader',
-                        options: {
-                            name: '开课吧测试'
-                        }
-                    }
-                ]
-            },
+            // {
+            //     test: /\.js$/,
+            //     use: [
+            //         {
+            //             loader: 'replace-loader-sync',
+            //             options: {
+            //                 name: 'kkb 开课吧测试'
+            //             }
+            //         },
+            //         {
+            //             loader: 'replace-loader',
+            //             options: {
+            //                 name: '开课吧测试'
+            //             }
+            //         }
+            //     ]
+            // },
             // {
             //     test: /\.(png|jpe?g|gif|webp)$/,
             //     use: {
@@ -112,10 +123,10 @@ module.exports = {
             filename: 'index.html',
             chunks: ['index']
         }),
-        new HtmlWebpackPlugin({
-            template: './src/list.html',
-            filename: 'list.html',
-            chunks: ['list']
-        })
+        // new HtmlWebpackPlugin({
+        //     template: './src/list.html',
+        //     filename: 'list.html',
+        //     chunks: ['list']
+        // })
     ]
 }
