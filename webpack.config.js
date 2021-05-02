@@ -2,12 +2,14 @@
  * @Description: webpack弟3节课的配置
  * @Author: jidongyu
  * @Date: 2021-04-21 15:05:21
- * @LastEditTime: 2021-04-21 15:13:38
- * @LastEditors: jidongyu
+ * @LastEditTime: 2021-04-25 01:41:50
+ * @LastEditors: Please set LastEditors
  * @Reference: 
  */
 const path = require('path');
 const minicss = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     /* 入口文件 */
     entry: {
@@ -20,11 +22,10 @@ module.exports = {
     },
     mode: 'development',
     resolveLoader: {
-        modules: ["node_modules","./my-loader"]
+        modules: ["node_modules", "./my-loader"]
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
             },
@@ -48,8 +49,7 @@ module.exports = {
             // },
             {
                 test: /\.js$/,
-                use: [
-                    {
+                use: [{
                         loader: 'replace-loader-sync',
                         options: {
                             name: 'kkb 开课吧测试'
@@ -68,7 +68,7 @@ module.exports = {
                 use: {
                     loader: "file-loader",
                     options: {
-                        name: "[name].[ext]"
+                        name: "images/[name].[ext]",
                     }
                 }
             }
@@ -76,7 +76,12 @@ module.exports = {
     },
     plugins: [
         new minicss({
-            filename: "[name].css"
+            filename: "css/[name].css"
+        }),
+        new CleanWebpackPlugin(),
+        new htmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html',
         })
     ]
 }
