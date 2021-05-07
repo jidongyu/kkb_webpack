@@ -2,7 +2,7 @@
  * @Description: webpack弟3节课的配置
  * @Author: jidongyu
  * @Date: 2021-04-21 15:05:21
- * @LastEditTime: 2021-05-02 20:48:43
+ * @LastEditTime: 2021-05-05 22:49:46
  * @LastEditors: Please set LastEditors
  * @Reference: 
  */
@@ -109,6 +109,10 @@ module.exports = {
                         publicPath: "./"
                     }
                 }
+            },
+            {
+                test: /\.js$/,
+                use: "babel-loader",
             }
         ]
     },
